@@ -1,0 +1,36 @@
+.footer {
+	&__logo {
+		color: var(--color-primary);
+		font-family: 'Raleway' sans-serif;
+		font-size: 2.6rem;
+		padding-top: 10px;
+		padding-bottom: 0;
+		text-decoration: none;
+		display: flex;
+		align-items: column;
+		margin-bottom: 10px;
+	}
+
+	&__copy {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.1rem;
+		color: var(--color-grey);
+	}
+
+	&__icons {
+		width: 60px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 700px) {
+	.footer__icons {
+		width: 120px;
+
+		& a img {
+			height: 36px;
+			width: 36px;
+		}
+	}
+}

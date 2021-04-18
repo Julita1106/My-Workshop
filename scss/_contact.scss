@@ -1,0 +1,144 @@
+.contact {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 150px;
+
+	&__column {
+		flex: 1;
+	}
+
+	&__title {
+		font-family: 'Raleway', sans-serif;
+		font-size: 5rem;
+		color: var(--color-black);
+	}
+
+	&__info {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.6rem;
+		color: var(--color-black);
+		margin: 20px 0;
+	}
+
+	&__details-item {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.2rem;
+		color: var(--color-grey);
+		text-decoration: none;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+
+		&:first-of-type {
+			margin-bottom: 42px;
+		}
+
+		label {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.2rem;
+			color: var(--color-primary);
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			font-weight: bold;
+			line-height: 1rem;
+		}
+	}
+
+	&__input {
+		border: none;
+		border-bottom: 1px solid var(--color-grey);
+	}
+
+	&__form-consent {
+		position: relative;
+		margin-top: 20px;
+	}
+
+	&__checkbox-input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+
+		&:checked ~ span {
+			background-image: url(../assets/checkmark.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__checkbox-custom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: var(--color-white);
+		border: 1px solid var(--color-grey);
+		border-radius: 4px;
+	}
+
+	&__checkbox-text {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.2rem;
+		color: var(--color-grey);
+		padding-left: 40px;
+	}
+
+	&__btn {
+		border: 2px solid var(--color-primary);
+		border-radius: 35px;
+		background: var(--color-primary);
+		box-shadow: 5px 10px 14px #07ace629;
+		color: var(--color-light-grey);
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.6rem;
+		padding: 25px 60px;
+		margin-top: 20px;
+		cursor: pointer;
+		align-self: flex-end;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+	.contact {
+		flex-direction: column;
+
+		&__details {
+			display: flex;
+			flex-direction: column;
+
+			&-item {
+				padding: 20px 0;
+				font-size: 1.6rem;
+			}
+		}
+
+		&__input {
+			font-size: 1.6rem;
+			padding: 20px;
+		}
+
+		&__form {
+			padding: 60px 0;
+		}
+
+		&__form-consent {
+			margin-top: 35px;
+		}
+
+		&__btn {
+			padding: 40px 135px;
+		}
+	}
+}

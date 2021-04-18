@@ -1,0 +1,137 @@
+.calculator {
+	background: #f7f7f7;
+	font-family: 'Relaway', sans-serif;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 85px 0;
+
+	&__main {
+		padding: 60px 0;
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+	}
+
+	&__options {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	&__input {
+		max-width: 100%;
+		background: #ffffff;
+		box-shadow: 0px 3px 6px #08a6e429;
+		border: 1px solid #08a6e4;
+		border-radius: 6px;
+		height: 40px;
+		font-size: 1.3rem;
+		color: var(--color-grey);
+		padding: 0 10px;
+
+		&:not(:first-child) {
+			margin-top: 20px;
+		}
+	}
+
+	&__checkbox-label {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		font-family: 'Open-Sans', sans-serif;
+		font-size: 1.2rem;
+		color: var(--color-grey);
+
+		input {
+			margin-right: 10px;
+			height: 20px;
+			width: 20px;
+		}
+	}
+
+	h2 {
+		font-size: 3.6rem;
+	}
+
+	&__prices {
+		flex: 1;
+		padding-left: 25px;
+	}
+
+	&__price-item {
+		background: var(--color-green);
+		box-shadow: 0px 3px 6px #00000029;
+		border-radius: 6px;
+		color: #fff;
+		max-width: 100%;
+		font-size: 1.3rem;
+		padding: 15px 25px;
+		display: flex;
+		justify-content: space-between;
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+
+		&--total {
+			background: none;
+			box-shadow: none;
+			justify-content: flex-end;
+			padding-right: 0;
+		}
+	}
+
+	&__total {
+		padding: 15px;
+		background: var(--color-primary);
+		color: #fff;
+		border-radius: 5px;
+		min-width: 50%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__amount {
+		font-weight: bold;
+	}
+
+	&__checkbox-label {
+		position: relative;
+		padding: 9px 0 0 35px;
+	}
+
+	&__checkbox-input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+
+		&:checked ~ span {
+			background-image: url(../assets/checkmark.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__checkbox-custom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: var(--color-white);
+		border: 1px solid var(--color-grey);
+		border-radius: 4px;
+	}
+
+	&__checkbox-text {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.2rem;
+		color: var(--color-grey);
+		padding-left: 40px;
+	}
+}
